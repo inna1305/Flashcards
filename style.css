@@ -1,0 +1,87 @@
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    background-image: url("images/flat-green.png");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inner_container {
+    margin-top: 20px;
+    padding: 2vw;
+    background-color: cornsilk;
+    border: 6px solid cornsilk;
+    border-radius: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 2vw;
+}
+
+.card {
+    color: white;
+    height: 150px;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+.title {
+    text-align: center;
+    color: #5e568f;
+    margin-bottom: 5px;
+    font-size: 2.8rem;
+}
+
+.card_text {
+    font-size: 1.8rem;
+    word-break: break-all;
+    text-align: center;
+
+}
+
+
+.link_autor_pic {
+    font-weight: 200;
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+}
+
+.back {
+    background-color: #fcb294;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.front {
+    background-color: #a169ff;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.card:hover {
+    transform: rotateY(180deg);
+    perspective: 1000px;
+}
